@@ -5,8 +5,8 @@ ul{
 
 html,body{
     
-    width: 50%;
- /*   background-color: black;*/
+    
+    background-color: black;
 }
 
 #send-message{
@@ -15,6 +15,7 @@ html,body{
    
     padding-bottom: 10%;
     padding-left: 20%;
+    
 
 }
 
@@ -30,9 +31,12 @@ html,body{
     font-family: 'Courier New', Courier, monospace;
     
 }
-#chat-txt{
+/*#chat-txt{
     margin-right: 10px;
-}
+    border-radius: 10px;
+    border: none;
+    text-indent: 10px;
+}*/ 
 
 
 
@@ -44,4 +48,13 @@ html,body{
     border:none;
     color:white;
     
+}
+
+#chat{
+    align-items: center;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    padding-right: 20px;
+    padding-top: 10px;
+    border-radius: 20px;
+    min-width: 400px;
 }
