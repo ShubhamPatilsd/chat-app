@@ -5,7 +5,7 @@ ul{
 
 html,body{
     
-    
+    width:100%;    
     background-color: black;
 }
 
@@ -21,16 +21,7 @@ html,body{
 
 
 
-.message{
-    
-    background-color: gray;
-    border-radius: 10px;
-    min-width: 200px;
-    padding: 5%;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    
-}
+
 /*#chat-txt{
     margin-right: 10px;
     border-radius: 10px;
@@ -38,9 +29,13 @@ html,body{
     text-indent: 10px;
 }*/ 
 
+#chat-txt{
+    margin-right: 10px;
+    
+    border: none;
+}
 
-
-#chat-btn{
+/*#chat-btn{
     display: block;
     padding: 10px 25px;
     background-color:rgb(3,169,244);
@@ -48,13 +43,22 @@ html,body{
     border:none;
     color:white;
     
-}
+}*/
 
-#chat{
+/*#chat{
     align-items: center;
     background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
     padding-right: 20px;
     padding-top: 10px;
     border-radius: 20px;
     min-width: 400px;
+}*/
+
+#chat{
+    align-items: center;
+ 
+    
+    padding-top: 10px;
+    
+    
 }
