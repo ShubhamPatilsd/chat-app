@@ -10,29 +10,58 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-const username=prompt("What's your name?");
+let username=prompt("What's your name?");
+function checkName(name){
+    if(username.trim()==""){
+        username=prompt("That is not a valid name");
+        checkName(username);
+    }else{
+        
+    }
+}
+checkName(username);
+
 
 document.getElementById("send-message").addEventListener("submit",postChat);
 
 function postChat(e){
     e.preventDefault();
-    const timestamp = Date.now();
+    const dateObj = new Date();
+    let Othertimestamp = (dateObj.getMonth()+"/"+dateObj.getDate()+"/"+dateObj.getFullYear+" "+dateObj.getHours()+":"+dateObj.getMinutes()+":"+dateObj.getSeconds()).toString();
+    const timestamp=Date.now();
     const chatTxt=document.getElementById("chat-txt");
     const message=chatTxt.value;
     chatTxt.value="";
     db.ref("messages/"+timestamp).set({
         usr: username,
         msg: message,
+        time: Othertimestamp
     });
     document.getElementById("chat-txt").focus();
 }
-
+function closeMessage(){
+    const dateObj = new Date();
+    let Othertimestamp = (dateObj.getMonth()+"/"+dateObj.getDate()+"/"+dateObj.getFullYear+" "+dateObj.getHours()+":"+dateObj.getMinutes()+":"+dateObj.getSeconds()).toString();
+    const timestamp=Date.now();
+    db.ref("messages/"+timestamp).set({
+        usr: "System",
+        msg: username+" has left.",
+        time: Othertimestamp
+    });
+    //document.getElementById("chat-txt").focus();
+}
 
 const fetchChat=db.ref("messages/");
 fetchChat.on("child_added",function(snapshot){
     const message = snapshot.val();
-    const msg = "<li>" + message.usr + ": " + message.msg + "</li><br>";
+    const msg = "<li>" + message.usr + " at "+message.Othertimestamp+" : " + message.msg + "</li><br>";
     
     document.getElementById("messages").innerHTML += msg;
     document.getElementById("chat-txt").focus();
-})
+});
+
+window.addEventListener('beforeunload', function (e) {
+    //e.preventDefault();
+    //e.returnValue = '';
+    closeMessage();
+});
