@@ -1,0 +1,19 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCkapaKPViCeM3_nE_jBV4X5FkdbcvbWpM",
+    authDomain: "realtime-chat-176dc.firebaseapp.com",
+    projectId: "realtime-chat-176dc",
+    storageBucket: "realtime-chat-176dc.appspot.com",
+    messagingSenderId: "13392932731",
+    appId: "1:13392932731:web:647bfba21e0cead5a6d7de"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
