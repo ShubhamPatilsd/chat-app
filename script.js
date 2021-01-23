@@ -31,10 +31,11 @@ function postChat(e){
     const timestamp=Date.now();
     const chatTxt=document.getElementById("chat-txt");
     const message=chatTxt.value;
+    const strippedText = $("<div/>").html(message).text();
     chatTxt.value="";
     db.ref("messages/"+timestamp).set({
         usr: username,
-        msg: message,
+        msg: strippedText,
         time: Othertimestamp
     });
     document.getElementById("chat-txt").focus();
