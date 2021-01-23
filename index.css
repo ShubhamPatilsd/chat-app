@@ -62,3 +62,7 @@ html,body{
     
     
 }
+
+.message{
+    font-size: 1rem !important;
+}

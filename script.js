@@ -59,7 +59,7 @@ function closeMessage(){
 const fetchChat=db.ref("messages/");
 fetchChat.on("child_added",function(snapshot){
     const message = snapshot.val();
-    const msg = "<li>" + message.usr + " ("+message.time+") : " + message.msg + "</li><br>";
+    const msg = "<li class=\"message\">" + message.usr + " ("+message.time+") : " + message.msg + "</li><br>";
     
     document.getElementById("messages").innerHTML += msg;
     document.getElementById("chat-txt").focus();
