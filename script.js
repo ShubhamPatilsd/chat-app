@@ -27,7 +27,7 @@ document.getElementById("send-message").addEventListener("submit",postChat);
 function postChat(e){
     e.preventDefault();
     const dateObj = new Date();
-    let Othertimestamp = (dateObj.getMonth()+"/"+dateObj.getDate()+"/"+dateObj.getFullYear+" "+dateObj.getHours()+":"+dateObj.getMinutes()+":"+dateObj.getSeconds()).toString();
+    let Othertimestamp = (dateObj.getMonth()+1+"/"+dateObj.getDate()+"/"+dateObj.getFullYear()+" at "+dateObj.getHours()+":"+dateObj.getMinutes()+":"+dateObj.getSeconds()).toString();
     const timestamp=Date.now();
     const chatTxt=document.getElementById("chat-txt");
     const message=chatTxt.value;
@@ -41,7 +41,7 @@ function postChat(e){
 }
 function closeMessage(){
     const dateObj = new Date();
-    let Othertimestamp = (dateObj.getMonth()+"/"+dateObj.getDate()+"/"+dateObj.getFullYear+" "+dateObj.getHours()+":"+dateObj.getMinutes()+":"+dateObj.getSeconds()).toString();
+    let Othertimestamp = (dateObj.getMonth()+1+"/"+dateObj.getDate()+"/"+dateObj.getFullYear()+" at "+dateObj.getHours()+":"+dateObj.getMinutes()+":"+dateObj.getSeconds()).toString();
     const timestamp=Date.now();
     db.ref("messages/"+timestamp).set({
         usr: "System",
@@ -51,10 +51,15 @@ function closeMessage(){
     //document.getElementById("chat-txt").focus();
 }
 
+
+
+
+
+
 const fetchChat=db.ref("messages/");
 fetchChat.on("child_added",function(snapshot){
     const message = snapshot.val();
-    const msg = "<li>" + message.usr + " at "+message.Othertimestamp+" : " + message.msg + "</li><br>";
+    const msg = "<li>" + message.usr + " ("+message.time+") : " + message.msg + "</li><br>";
     
     document.getElementById("messages").innerHTML += msg;
     document.getElementById("chat-txt").focus();
