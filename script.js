@@ -40,7 +40,7 @@ function postChat(e){
         msg: strippedText,
         time: Othertimestamp
     });
-    document.getElementById("test").scrollIntoView();
+    document.getElementById('test').scrollTop = document.getElementById('test').scrollHeight
     document.getElementById("chat-txt").focus();
 }
 function closeMessage(){
@@ -69,7 +69,7 @@ fetchChat.on("child_added",function(snapshot){
     
     document.getElementById("messages").innerHTML += msg;
     document.getElementById("chat-txt").focus();
-    document.getElementById("test").scrollIntoView();
+    document.getElementById('test').scrollTop = document.getElementById('test').scrollHeight
 });
 
 window.addEventListener('beforeunload', function (e) {

@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="window" float style="max-width: 50%; height: 50%;">
+    <div class="window" float style="max-width: 60%; height: 75%;">
         <div class="title-bar">
           <div class="title-bar-text">Chit Chat</div>
           <div class="title-bar-controls">
@@ -26,7 +26,8 @@
                 <form id="send-message">
                 
                   
-                    <input id="chat-txt" type="text" autocomplete="off"/>
+                    <input id="chat-txt" type="text" autocomplete="off" spellcheck="true" role="textbox" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word"/>
+                    
                   <button id="chat-btn" type="submit">Send</button>
                 
                 </form>      

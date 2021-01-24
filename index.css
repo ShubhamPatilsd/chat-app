@@ -16,7 +16,7 @@ html,body{
     display: inline-flex;
     width: 10%;
    
-    /*padding-bottom: 10%;*/
+    padding-bottom: 5%;
     padding-left: 20%;
     
     
@@ -25,14 +25,17 @@ html,body{
 
 .window{
     min-width: 300px;
+    
 }
 
 #test{
     
     width: auto;
-    height: 93%;
+    height: 89%;
     overflow-y: auto;
-    
+    overflow-x: hidden;
+    word-wrap: break-word;
+    padding-right: 10%;
 
 }
 
@@ -81,6 +84,6 @@ html,body{
 }
 
 .message{
-    /*font-size: 120% !important;*/
+    font-size: 15px;
     font-weight: bold;
 }
