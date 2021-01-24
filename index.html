@@ -6,11 +6,11 @@
     <title>Chat App</title>
     <link rel="stylesheet" href="index.css">
     
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="98.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="window" style="width: 98%">
+    <div class="window" float style="width: 50%; height: 50%;">
         <div class="title-bar">
           <div class="title-bar-text">Chit Chat</div>
           <div class="title-bar-controls">
@@ -19,8 +19,9 @@
             <button aria-label="Close"></button>
           </div>
         </div>
-        <div class="window-body">
-            <div id="chat">     
+        <div class="window-body" id="test">
+            <div id="chat"> 
+
                 <ul id="messages"></ul>
                 <form id="send-message">
                 
@@ -36,5 +37,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="script.js"></script>   
+    <script src="os.js"></script>
 </body>
 </html>

@@ -52,7 +52,8 @@ function closeMessage(){
     //document.getElementById("chat-txt").focus();
 }
 
-
+//<div class="window" float style="width: 98%">
+//<link rel="stylesheet" href="https://unpkg.com/98.css" />
 
 
 
