@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-    storageBucket: process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: APP_ID
+    apiKey: "AIzaSyCkapaKPViCeM3_nE_jBV4X5FkdbcvbWpM",
+    authDomain: "realtime-chat-176dc.firebaseapp.com",
+    projectId: "realtime-chat-176dc",
+    storageBucket: "realtime-chat-176dc.appspot.com",
+    messagingSenderId: "13392932731",
+    appId: "1:13392932731:web:647bfba21e0cead5a6d7de"
   };
 
 firebase.initializeApp(firebaseConfig);
@@ -36,6 +36,9 @@ function postChat(e){
     const chatTxt=document.getElementById("chat-txt");
     const message=chatTxt.value;
     const strippedText = $("<div/>").html(message).text();
+    if(strippedText.trim()==""){
+        
+    }else{
     chatTxt.value="";
     db.ref("messages/"+timestamp).set({
         usr: username,
@@ -44,6 +47,7 @@ function postChat(e){
     });
     document.getElementById('test').scrollTop = document.getElementById('test').scrollHeight
     document.getElementById("chat-txt").focus();
+}
 }
 function closeMessage(){
     const dateObj = new Date();
