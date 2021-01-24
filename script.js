@@ -24,6 +24,8 @@ checkName(username);
 
 document.getElementById("send-message").addEventListener("submit",postChat);
 
+
+
 function postChat(e){
     e.preventDefault();
     const dateObj = new Date();
@@ -38,6 +40,7 @@ function postChat(e){
         msg: strippedText,
         time: Othertimestamp
     });
+    document.getElementById("test").scrollIntoView();
     document.getElementById("chat-txt").focus();
 }
 function closeMessage(){
@@ -49,7 +52,8 @@ function closeMessage(){
         msg: username+" has left.",
         time: Othertimestamp
     });
-    //document.getElementById("chat-txt").focus();
+    
+    
 }
 
 //<div class="window" float style="width: 98%">
@@ -65,6 +69,7 @@ fetchChat.on("child_added",function(snapshot){
     
     document.getElementById("messages").innerHTML += msg;
     document.getElementById("chat-txt").focus();
+    document.getElementById("test").scrollIntoView();
 });
 
 window.addEventListener('beforeunload', function (e) {
@@ -72,3 +77,7 @@ window.addEventListener('beforeunload', function (e) {
     //e.returnValue = '';
     closeMessage();
 });
+
+
+
+

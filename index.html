@@ -10,13 +10,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="window" float style="width: 50%; height: 50%;">
+    <div class="window" float style="max-width: 50%; height: 50%;">
         <div class="title-bar">
           <div class="title-bar-text">Chit Chat</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+            <button aria-label="Close" id="Close" onclick="self.close()"></button>
           </div>
         </div>
         <div class="window-body" id="test">
