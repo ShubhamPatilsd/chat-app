@@ -45,7 +45,7 @@ function postChat(e){
         msg: strippedText,
         time: Othertimestamp
     });
-    document.getElementById('test').scrollTop = document.getElementById('test').scrollHeight
+    document.getElementById('test').scrollTop = document.getElementById('test').scrollHeight;
     document.getElementById("chat-txt").focus();
 }
 }

@@ -86,5 +86,5 @@ html,body{
 
 .message{
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bolder !important;
 }
