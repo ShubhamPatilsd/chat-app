@@ -1,5 +1,5 @@
-//require('dotenv').config()
-
+require('dotenv').config()
+console.log(process.env.TEST)
 
 const firebaseConfig = {
     apiKey: process.env.API_KEY,
