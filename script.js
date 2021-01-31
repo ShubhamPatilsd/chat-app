@@ -1,14 +1,11 @@
-
-
-console.log(process.env.NEXT_PUBLIC_TEST);
-
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-    storageBucket: process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: process.env.APP_ID
+    apiKey: "AIzaSyCkapaKPViCeM3_nE_jBV4X5FkdbcvbWpM",
+    authDomain: "realtime-chat-176dc.firebaseapp.com",
+    databaseURL: "https://realtime-chat-176dc-default-rtdb.firebaseio.com",
+    projectId: "realtime-chat-176dc",
+    storageBucket: "realtime-chat-176dc.appspot.com",
+    messagingSenderId: "13392932731",
+    appId: "1:13392932731:web:647bfba21e0cead5a6d7de"
   };
 
 firebase.initializeApp(firebaseConfig);
