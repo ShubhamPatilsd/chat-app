@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/ShubhamPatilsd/chat-app#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "requirejs": "^2.3.6"
+    "dotenv": "^8.2.0"
   }
 }
